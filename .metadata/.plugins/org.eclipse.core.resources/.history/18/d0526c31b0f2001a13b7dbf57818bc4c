@@ -1,0 +1,67 @@
+package utils;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.pdfbox.text.PDFTextStripperByArea;
+import java.util.*;
+import java.io.*;
+
+public class PdfToexel 
+{
+ public static void main(String args[]) throws IOException 
+ {
+  try
+  {
+   
+	 FileInputStream obj =new FileInputStream("E:\\SeleniumJavaFramework1-master\\SeleniumJavaFramework1-master\\SeleniumJavaFramework\\excel\\file2.PDF");
+   PrintWriter csvFile = new PrintWriter("data.csv");// this is the name of csv excel file where the pdf data will store...
+   
+   PDDocument document = PDDocument.load(obj);// here file2.pdf is the name of pdf file which we want to read .
+   document.getClass();
+   if (!document.isEncrypted())
+   {
+    PDFTextStripperByArea stripper = new PDFTextStripperByArea();
+    stripper.setSortByPosition(true);
+    PDFTextStripper Tstripper = new PDFTextStripper();
+    String str = Tstripper.getText(document);
+    
+    Scanner scnLine = null;     
+    scnLine = new Scanner(str);// scanner to read lines from pdf file...
+    
+    
+    
+    String line="";
+    String strDate="";
+    String strDay="";
+    String strTotalProfit="";
+    String strDailyProfit="";
+    
+    while (scnLine.hasNextLine()) 
+    {  
+     
+     line = scnLine.nextLine();
+     
+     Scanner scnWord = new Scanner(line); // scanner to read words from lines....
+     
+     strDate=scnWord.next();
+     
+     strDay=scnWord.next();
+     
+     strTotalProfit=scnWord.next();
+     
+     strDailyProfit=scnWord.next();
+     
+     csvFile.println(strDailyProfit+","+strDay+","+strTotalProfit+","+strDailyProfit);
+     
+    } 
+   }
+   document.close();
+   csvFile.close();
+  }
+  catch (Exception e) 
+  {
+   e.printStackTrace();
+  }
+   
+ }
+}
