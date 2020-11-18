@@ -53,6 +53,7 @@
 			<artifactId>eyes-selenium-java3</artifactId>
 			<version>RELEASE</version>
 		</dependency>
+		
 		  <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
 		<dependency>
 		    <groupId>org.apache.pdfbox</groupId>

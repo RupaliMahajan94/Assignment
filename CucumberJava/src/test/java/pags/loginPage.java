@@ -2,6 +2,7 @@ package pags;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class loginPage {
 
@@ -23,6 +24,8 @@ if(!driver.getTitle().equals("Studio Next"))
 }
 public void enterUserPass(String username ,String password)
 {
+	
+	
 	driver.findElement(txt_username).sendKeys(username);
 	driver.findElement(txt_password).sendKeys(password);
 	
