@@ -357,3 +357,9 @@ java -ea -classpath C:\Users\ASUS\eclipse\java-2020-062\eclipse\configuration\or
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2020-11-18 21:43:02.405
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-11-18 22:26:23.437
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-11-18 22:26:23.440
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
